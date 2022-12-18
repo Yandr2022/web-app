@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1adbf9b7-af3b-4aa0-8125-cf6539fd2694" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/TaskLogin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/example/servlets/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/example/servlets/WelcomeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/example/servlets/task/ResultServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/example/servlets/task/TaskServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/example/util/AppConstance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/TestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/example/servlets/TestServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/task/TaskServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/example/servlets/task/TaskServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671355927071</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="train responce, request, added first Task">
+      <created>1671375450721</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671375450721</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,6 +174,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init first Web Application" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init first Web Application" />
+    <MESSAGE value="train responce, request, added first Task" />
+    <option name="LAST_COMMIT_MESSAGE" value="train responce, request, added first Task" />
   </component>
 </project>
