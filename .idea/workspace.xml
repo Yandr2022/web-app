@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1adbf9b7-af3b-4aa0-8125-cf6539fd2694" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/org/DAO/impl/AbstractDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/DAO/impl/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/DAO/impl/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/util/DB_Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/task/TaskServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/example/servlets/task/TaskServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/example/servlets/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/example/util/AppConstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/util/AppConstance.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +56,9 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/Юлия/.m2/repository/javax.mail.jar/javax.mail.jar",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager"
@@ -62,6 +70,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Smart Tomcat.TomCat">
+    <configuration name="DB_Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.util.DB_Util" />
+      <module name="web-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Test" />
       <module name="web-app" />
@@ -89,7 +110,7 @@
       <option name="tomcatInfo">
         <TomcatInfo>
           <option name="name" value="Apache Tomcat/9.0.70" />
-          <option name="path" value="$PROJECT_DIR$/../../../Program Files/Java/apache-tomcat-9.0.70-windows-x64/apache-tomcat-9.0.70" />
+          <option name="path" value="$USER_HOME$/apache-tomcat-9.0.70" />
           <option name="version" value="9.0.70.0" />
         </TomcatInfo>
       </option>
@@ -119,11 +140,13 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.DB_Util" />
       <item itemvalue="Application.Test" />
       <item itemvalue="Smart Tomcat.TomCat" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DB_Util" />
         <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
@@ -136,6 +159,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671288526376</updated>
+      <workItem from="1671465618052" duration="8876000" />
     </task>
     <task id="LOCAL-00001" summary="Init first Web Application">
       <created>1671355612799</created>
@@ -160,6 +184,9 @@
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
