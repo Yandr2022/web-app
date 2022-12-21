@@ -2,18 +2,31 @@ package org.DAO.impl;
 
 import org.util.DB_Util;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Set;
 
 public class UserDao extends AbstractDAO <User> {
 
 
     public boolean insert(User user) {
+        String sql = "INSERT INTO user( name, email, password) VALUES (?,?,?)";
+        try (Connection connection = DB_Util.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setString(1, user.getName());
+            statement.setString(2, user.getEmail());
+            statement.setString(3, user.getPassword());
+            if (statement.executeUpdate() == 1) {
+                System.out.println("User was inserted");
+                return true;
+            }
+
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
         return false;
     }
+
+
 
     public boolean update(User user) {
         return false;
@@ -54,10 +67,7 @@ public class UserDao extends AbstractDAO <User> {
         } finally {
             DB_Util.release(connection, statement, null, set);
         }
-
-
-
-        DB_Util.release(connection, null, null, null);
-        return null;
+//        DB_Util.release(connection, null, null, null);
+        return user;
     }
 }

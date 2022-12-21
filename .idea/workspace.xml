@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1adbf9b7-af3b-4aa0-8125-cf6539fd2694" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/org/DAO/impl/AbstractDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/DAO/impl/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/DAO/impl/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/util/DB_Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Reg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/activate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/example/servlets/RegServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/util/IOUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/util/Mail_Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/example/servlets/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/example/util/AppConstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/util/AppConstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/DAO/impl/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/DAO/impl/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/util/AppConstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/util/AppConstance.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,27 +51,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Юлия/.m2/repository/javax.mail.jar/javax.mail.jar",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Юлия/.m2/repository/javax.mail.jar/javax.mail.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Smart Tomcat.TomCat">
+  <component name="RunManager" selected="Application.Mail_Utils">
     <configuration name="DB_Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.util.DB_Util" />
+      <module name="web-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Mail_Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.util.Mail_Utils" />
       <module name="web-app" />
       <extension name="coverage">
         <pattern>
@@ -104,9 +117,6 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="/web-app" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="tomcatInfo">
         <TomcatInfo>
           <option name="name" value="Apache Tomcat/9.0.70" />
@@ -140,12 +150,14 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Mail_Utils" />
       <item itemvalue="Application.DB_Util" />
       <item itemvalue="Application.Test" />
       <item itemvalue="Smart Tomcat.TomCat" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Mail_Utils" />
         <item itemvalue="Application.DB_Util" />
         <item itemvalue="Application.Test" />
       </list>
@@ -159,7 +171,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671288526376</updated>
-      <workItem from="1671465618052" duration="8876000" />
+      <workItem from="1671465618052" duration="9239000" />
+      <workItem from="1671638031030" duration="7458000" />
     </task>
     <task id="LOCAL-00001" summary="Init first Web Application">
       <created>1671355612799</created>
@@ -182,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671375450721</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="19122022 LESSON">
+      <created>1671476044917</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671476044917</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +222,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init first Web Application" />
     <MESSAGE value="train responce, request, added first Task" />
-    <option name="LAST_COMMIT_MESSAGE" value="train responce, request, added first Task" />
+    <MESSAGE value="19122022 LESSON" />
+    <option name="LAST_COMMIT_MESSAGE" value="19122022 LESSON" />
   </component>
 </project>
