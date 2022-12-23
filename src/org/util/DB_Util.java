@@ -2,7 +2,7 @@ package org.util;
 
 import java.sql.*;
 
-import static org.util.AppConstance.*;
+import static org.util.AppConstants.*;
 
 public class DB_Util {
 
@@ -11,11 +11,11 @@ public class DB_Util {
         try {
             Class.forName(DB_DRIVER);
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-            System.out.printf("Connection " + connection);
         } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException();
         } catch (ClassNotFoundException e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
         return connection;
@@ -29,7 +29,6 @@ public class DB_Util {
             }
             if (statement != null) {
                 System.out.printf("statement is closed " + statement);
-                ;
                 statement.close();
             }
             if (prdstatement != null) {
@@ -47,7 +46,5 @@ public class DB_Util {
 
     }
 
-    public static void main(String[] args) {
-        Connection connection = getConnection();
-    }
+
 }

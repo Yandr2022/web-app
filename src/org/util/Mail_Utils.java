@@ -8,14 +8,14 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class Mail_Utils {
-//    private static Properties g_prop = new Properties();
-//
-//    static {
-//        g_prop.put("mail.smtp.host", "smtp.gmail.com");
-//        g_prop.put("mail.smtp.port", "587");
-//        g_prop.put("mail.smtp.auth", "true");
-//        g_prop.put("mail.smtp.starttls.enable", "true"); //TLS
-//    }
+    private static Properties g_prop = new Properties();
+
+    static {
+        g_prop.put("mail.smtp.host", "smtp.gmail.com");
+        g_prop.put("mail.smtp.port", "587");
+        g_prop.put("mail.smtp.auth", "true");
+        g_prop.put("mail.smtp.starttls.enable", "true"); //TLS
+    }
 
     private static Properties prop = new Properties();
 
@@ -31,7 +31,7 @@ public class Mail_Utils {
         return Session.getInstance(prop,
                 new Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(AppConstance.MAIL_ACCOUNT, AppConstance.MAIL_PASSWORD);
+                        return new PasswordAuthentication(AppConstants.MAIL_ACCOUNT, AppConstants.MAIL_PASSWORD);
                     }
                 });
     }
@@ -51,7 +51,6 @@ public class Mail_Utils {
     }
 
 
-
     public static void send(String to, String subject, String content, String path) {
         try {
             Message message = prepareMessage(to, subject);
@@ -60,12 +59,12 @@ public class Mail_Utils {
             textPart.setContent(content, "text/html");
 
             MimeBodyPart attachmentPart = new MimeBodyPart();
-            if(path != null)
+            if (path != null)
                 attachmentPart.attachFile(new File(path));
 
             Multipart multipart = new MimeMultipart();
             multipart.addBodyPart(textPart);
-            if(path != null)
+            if (path != null)
                 multipart.addBodyPart(attachmentPart);
 
             message.setContent(multipart); // TODO check HTML
@@ -83,15 +82,15 @@ public class Mail_Utils {
 
 
     private static Message prepareMessage(String to, String subject) throws MessagingException {
-        if(!isValidEmailAddress(to)){
+        if (!isValidEmailAddress(to)) {
             throw new IllegalArgumentException("Wrong email address");
         }
 
         Message message = new MimeMessage(getSession());
-        message.setFrom(new InternetAddress(AppConstance.MAIL_ACCOUNT));
+        message.setFrom(new InternetAddress(AppConstants.MAIL_ACCOUNT));
         message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
         message.setSubject(subject);
-        return  message;
+        return message;
     }
 
 
@@ -103,13 +102,16 @@ public class Mail_Utils {
         } catch (AddressException ex) {
             result = false;
         }
-        return result;
-    }
+            return result;
+        }
+
+
+
 
 
     public static void main(String[] args) {
 
-        send("sharkievich@mail.ru", "TEST", "TEST","C:\\Users\\st\\IdeaProjects\\web-app\\src\\main\\webapp\\Login.html");
+        send("sharkievich@mail.ru", "This is not SPAM", "no spam");
 
     }
 }

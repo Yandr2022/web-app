@@ -2,7 +2,6 @@ package org.example.servlets;
 
 import org.DAO.impl.User;
 import org.DAO.impl.UserDao;
-import org.util.AppConstance;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

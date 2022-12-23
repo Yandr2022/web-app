@@ -2,7 +2,9 @@ package org.example.servlets;
 
 import org.DAO.impl.User;
 import org.DAO.impl.UserDao;
+import org.util.IOUtils;
 import org.util.Mail_Utils;
+//import org.util.Mail_Utils;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,7 +18,7 @@ import java.io.IOException;
 public class RegServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher dispatcher = req.getRequestDispatcher("reg.html");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("Reg.html");
         dispatcher.forward(req, resp);
     }
 
@@ -26,18 +28,18 @@ public class RegServlet extends HttpServlet {
         String email = req.getParameter("email").trim();
         String pwd1 = req.getParameter("password1");
         String pwd2 = req.getParameter("password2");
-        RequestDispatcher dispatcher = req.getRequestDispatcher("reg.html");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("Reg.html");
         resp.setContentType("text/html");
         if (!pwd1.equals(pwd2)){
-            resp.getWriter().println("Password are not equal");
+            resp.getWriter().println("<b>Password are not equal</b>");
             dispatcher.include(req,resp);
             return;
         }
         UserDao dao = new UserDao();
         User user =dao.getByEmail(email);
         if (user != null) {
-            resp.getWriter().println("Email already exist! Please <a href = 'login'>login</a>");
-            dispatcher.forward(req,resp);
+            resp.getWriter().println("<b>Email already exist! Please </b><a href = 'login'>login</a>");
+            dispatcher.include(req,resp);
             return;
 
         }
@@ -46,7 +48,17 @@ public class RegServlet extends HttpServlet {
         user1.setName(name);
         user1.setEmail(email);
         user1.setPassword(pwd1);
-        dao.insert(user);
-        Mail_Utils.send(email,"Registration", );
+        boolean added = dao.insert(user1);
+        if (added) {
+            String content = IOUtils.readFileBuff("C:\\Users\\User\\IdeaProjects\\web-app\\src\\main\\webapp\\templates\\activate.html");
+            content.replace("{*}", "http://localhost:8080/web-app/activate?email=" + email);
+            Mail_Utils.send(email, "user app activation", content, null);
+            resp.getWriter().println("<b> Thanks for registration...Please check your mailbox</b>");
+            return;
+        }else {
+            resp.getWriter().println("<b>Some error on server...</b>");
+            dispatcher.include(req,resp);
+            return;
+        }
     }
 }
