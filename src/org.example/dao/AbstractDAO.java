@@ -1,4 +1,4 @@
-package org.DAO;
+package org.example.dao;
 
 import java.util.Set;
 

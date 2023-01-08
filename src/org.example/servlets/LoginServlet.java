@@ -1,7 +1,9 @@
 package org.example.servlets;
 
-import org.DAO.impl.User;
-import org.DAO.impl.UserDao;
+
+
+import org.example.dao.impl.UserDao;
+import org.example.model.User;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

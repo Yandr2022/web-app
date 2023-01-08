@@ -1,6 +1,7 @@
-package org.DAO.impl;
+package org.example.model;
 
 import lombok.Data;
+
 
 @Data
 public class User {
@@ -8,4 +9,7 @@ public class User {
     private String name;
     private String email;
     private String password;
+    private String isActivate;
+
+
 }

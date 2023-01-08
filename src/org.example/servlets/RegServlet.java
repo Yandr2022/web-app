@@ -1,9 +1,11 @@
 package org.example.servlets;
 
-import org.DAO.impl.User;
-import org.DAO.impl.UserDao;
-import org.util.IOUtils;
-import org.util.Mail_Utils;
+import org.example.dao.impl.UserDao;
+import org.example.model.User;
+import org.example.util.IOUtils;
+import org.example.util.Mail_Utils;
+
+
 //import org.util.Mail_Utils;
 
 import javax.servlet.RequestDispatcher;
@@ -13,6 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
 
 @WebServlet("/registration")
 public class RegServlet extends HttpServlet {
@@ -43,15 +46,15 @@ public class RegServlet extends HttpServlet {
             return;
 
         }
-
         User user1 = new User();
         user1.setName(name);
         user1.setEmail(email);
         user1.setPassword(pwd1);
         boolean added = dao.insert(user1);
         if (added) {
-            String content = IOUtils.readFileBuff("C:\\Users\\User\\IdeaProjects\\web-app\\src\\main\\webapp\\templates\\activate.html");
-            content.replace("{*}", "http://localhost:8080/web-app/activate?email=" + email);
+//            String content = IOUtils.readFileBuff("C:\\Users\\Юлия\\web-app\\src\\main\\webapp\\templates\\activate.html");
+//            content.replace("{/*}", "https://localhost:8080/web-app/activate?email=" + email);
+            String content = "<a href = 'http://localhost:8080/web-app/activate?email=" + email+"'>Activate</a>";
             Mail_Utils.send(email, "user app activation", content, null);
             resp.getWriter().println("<b> Thanks for registration...Please check your mailbox</b>");
             return;
@@ -61,4 +64,6 @@ public class RegServlet extends HttpServlet {
             return;
         }
     }
+
+
 }

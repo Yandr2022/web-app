@@ -1,7 +1,9 @@
-package org.DAO.impl;
+package org.example.dao.impl;
 
-import org.DAO.AbstractDAO;
-import org.util.DB_Util;
+import org.example.dao.AbstractDAO;
+import org.example.model.User;
+import org.example.util.DB_Util;
+
 
 import java.sql.*;
 import java.util.Set;
@@ -10,12 +12,12 @@ public class UserDao extends AbstractDAO<User> {
 
 
     public boolean insert(User user) {
-        String sql = "INSERT INTO user( name, email, password ) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO users_db ( name, email, password ) VALUES (?, ?, ?)";
         try (Connection connection = DB_Util.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, user.getName());
-            statement.setString(1, user.getEmail());
-            statement.setString(1, user.getPassword());
+            statement.setString(2, user.getEmail());
+            statement.setString(3, user.getPassword());
             if (statement.executeUpdate() == 1) {
                 System.out.println("user was inserted successfully");
                 return true;
@@ -27,7 +29,27 @@ public class UserDao extends AbstractDAO<User> {
         return false;
     }
 
+    @Override
     public boolean update(User user) {
+        return false;
+    }
+
+    public boolean activateAccount(User user) {
+        if (user.getIsActivate().equals("Y")){
+            return false;
+            }
+            String sql = " UPDATE users_db SET isActive ='Y',`updatedTime`= CURRENT_TIMESTAMP WHERE email = ?";
+        try (Connection connection = DB_Util.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setString(1, user.getEmail());
+            if (statement.executeUpdate() == 1) {
+                System.out.println("user was updated successfully");
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException();
+        }
         return false;
     }
 
@@ -45,7 +67,7 @@ public class UserDao extends AbstractDAO<User> {
 
     public User getByEmail(String email) {
         Connection connection = DB_Util.getConnection();
-        String sql = "SELECT * FROM user WHERE email = '" + email + "'";
+        String sql = "SELECT * FROM users_db WHERE email = '" + email + "'";
         Statement statement = null;
         ResultSet set = null;
         User user = null;
@@ -58,8 +80,9 @@ public class UserDao extends AbstractDAO<User> {
                 user.setId(set.getInt(1));
                 user.setName(set.getString("name"));
                 user.setPassword(set.getString("password"));
+                user.setIsActivate(set.getString("isActive"));
             } else {
-                System.out.println("user not found");
+                System.out.println("User not found "+ email);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

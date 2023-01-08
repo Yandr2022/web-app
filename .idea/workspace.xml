@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SHOW_STRUCTURE" value="true" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1adbf9b7-af3b-4aa0-8125-cf6539fd2694" name="Changes" comment="train responce, request, added first Task">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/util/AppConstants.java" afterDir="false" />
+    <list default="true" id="1adbf9b7-af3b-4aa0-8125-cf6539fd2694" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/org.example/servlets/ActivateServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Reg.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Reg.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/activate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/activate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/DAO/impl/AbstractDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/DAO/AbstractDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/DAO/impl/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/DAO/impl/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/example/servlets/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/RegServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/example/servlets/RegServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/util/AppConstance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/util/DB_Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/util/DB_Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/util/Mail_Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/util/Mail_Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/DAO/AbstractDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/dao/AbstractDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/DAO/impl/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/DAO/impl/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/dao/impl/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/RegServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/RegServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/TestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/TestServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/WelcomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/WelcomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/task/ResultServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/task/ResultServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/task/TaskServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/task/TaskServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/util/AppConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/util/AppConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/util/DB_Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/util/DB_Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/util/IOUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/util/IOUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/util/Mail_Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/util/Mail_Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,22 +80,27 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/web-app/src/main/webapp&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.43218392&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propDebugger&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Юлия\web-app\src\org.example\model" />
+      <recent name="C:\Users\Юлия\web-app\src\org" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Smart Tomcat.TomCat">
+  <component name="RunManager" selected="Smart Tomcat.Tomcat: web-app">
     <configuration name="DB_Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.util.DB_Util" />
+      <option name="MAIN_CLASS_NAME" value="org.example.util.DB_Util" />
       <module name="web-app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.util.*" />
+          <option name="PATTERN" value="org.example.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,12 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Mail_Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.util.Mail_Utils" />
+    <configuration name="RegServlet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.servlets.RegServlet" />
       <module name="web-app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.util.*" />
+          <option name="PATTERN" value="org.example.servlets.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,12 +121,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Test" />
+    <configuration name="User" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.model.User" />
       <module name="web-app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.example.util.Mail_Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.util.Mail_Utils" />
+      <module name="web-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,8 +157,28 @@
       <option name="docBase" value="C:\Users\User\IdeaProjects\web-app\src\main\webapp" />
       <option name="tomcatInfo">
         <TomcatInfo>
-          <option name="name" value="Apache Tomcat/9.0.70 (9)" />
-          <option name="path" value="$PROJECT_DIR$/../../../../Program Files/Java/apache-tomcat-9.0.70" />
+          <option name="name" value="Apache Tomcat/9.0.70 (4)" />
+          <option name="path" value="$PROJECT_DIR$/../../../Program Files/Java/apache-tomcat-9.0.70-windows-x64/apache-tomcat-9.0.70" />
+          <option name="version" value="9.0.70.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat: web-app" type="com.poratu.idea.plugins.tomcat" temporary="true">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="contextPath" value="/web-app" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/9.0.70 (3)" />
+          <option name="path" value="$PROJECT_DIR$/../../../Program Files/Java/apache-tomcat-9.0.70-windows-x64/apache-tomcat-9.0.70" />
           <option name="version" value="9.0.70.0" />
         </TomcatInfo>
       </option>
@@ -161,16 +208,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Mail_Utils" />
       <item itemvalue="Application.DB_Util" />
-      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.RegServlet" />
+      <item itemvalue="Application.User" />
+      <item itemvalue="Application.org.example.util.Mail_Utils" />
       <item itemvalue="Smart Tomcat.TomCat" />
+      <item itemvalue="Smart Tomcat.Tomcat: web-app" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Mail_Utils" />
+        <item itemvalue="Smart Tomcat.Tomcat: web-app" />
         <item itemvalue="Application.DB_Util" />
-        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.User" />
+        <item itemvalue="Application.RegServlet" />
+        <item itemvalue="Application.org.example.util.Mail_Utils" />
       </list>
     </recent_temporary>
   </component>

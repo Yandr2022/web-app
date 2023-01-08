@@ -1,11 +1,21 @@
-package org.util;
+package org.example.util;
 
 
-import javax.mail.*;
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Multipart;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
 import javax.mail.internet.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.Properties;
+
+
+import static org.example.util.AppConstants.MAIL_ACCOUNT;
+import static org.example.util.AppConstants.MAIL_PASSWORD;
 
 public class Mail_Utils {
     private static Properties g_prop = new Properties();
@@ -23,7 +33,7 @@ public class Mail_Utils {
         prop.put("mail.smtp.host", "smtp.rambler.ru");
         prop.put("mail.smtp.port", "2525");
         prop.put("mail.smtp.auth", "true");
-        prop.put("mail.smtp.starttls.enable", "true"); //TLS
+        prop.put("mail.smtp.starttls.enable", "false"); //TLS
     }
 
 
@@ -31,7 +41,7 @@ public class Mail_Utils {
         return Session.getInstance(prop,
                 new Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(AppConstants.MAIL_ACCOUNT, AppConstants.MAIL_PASSWORD);
+                        return new PasswordAuthentication(MAIL_ACCOUNT, MAIL_PASSWORD);
                     }
                 });
     }
@@ -87,7 +97,7 @@ public class Mail_Utils {
         }
 
         Message message = new MimeMessage(getSession());
-        message.setFrom(new InternetAddress(AppConstants.MAIL_ACCOUNT));
+        message.setFrom(new InternetAddress(MAIL_ACCOUNT));
         message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
         message.setSubject(subject);
         return message;
@@ -104,7 +114,6 @@ public class Mail_Utils {
         }
             return result;
         }
-
 
 
 

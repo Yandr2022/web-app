@@ -1,8 +1,9 @@
-package org.util;
+package org.example.util;
 
 import java.sql.*;
 
-import static org.util.AppConstants.*;
+import static org.example.util.AppConstants.*;
+
 
 public class DB_Util {
 
@@ -11,15 +12,13 @@ public class DB_Util {
         try {
             Class.forName(DB_DRIVER);
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-        } catch (SQLException e) {
+        } catch (SQLException |ClassNotFoundException e) {
             e.printStackTrace();
             throw new RuntimeException();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-            throw new RuntimeException(e);
         }
         return connection;
     }
+
 
     public static void release(Connection connection, Statement statement, PreparedStatement prdstatement, ResultSet set) {
         try {
@@ -28,15 +27,15 @@ public class DB_Util {
                 connection.close();
             }
             if (statement != null) {
-                System.out.printf("statement is closed " + statement);
+                System.out.printf("Statement is closed " + statement);
                 statement.close();
             }
             if (prdstatement != null) {
-                System.out.printf("prdstatement is closed " + prdstatement);
+                System.out.printf("PrdStatement is closed " + prdstatement);
                 prdstatement.close();
             }
             if (set != null) {
-                System.out.printf("set is closed " + set);
+                System.out.printf("Set is closed " + set);
                 set.close();
             }
         } catch (SQLException e) {
@@ -45,6 +44,22 @@ public class DB_Util {
         }
 
     }
-
-
+//    public static void main(String[] args) {
+//        System.out.println(new Date().toString());
+//        Connection connection = DB_Util.getConnection();
+//        String sql = "SELECT * FROM `users_db` WHERE email = 'sharkievich@mail.ru';";
+//        Statement statement = null;
+//        ResultSet set = null;
+//
+//        try {
+//            statement = connection.createStatement();
+//            set = statement.executeQuery(sql);
+//            System.out.println(set.getInt(1));
+//
+//
+//
+//        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 }
