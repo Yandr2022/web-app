@@ -61,7 +61,7 @@ public class Mail_Utils {
     }
 
 
-    public static void send(String to, String subject, String content, String path) {
+    public static boolean send(String to, String subject, String content, String path) {
         try {
             Message message = prepareMessage(to, subject);
 
@@ -82,11 +82,11 @@ public class Mail_Utils {
             System.out.println("Sending...");
             Transport.send(message);
             System.out.println("Message is sent.");
+            return true;
 
-        } catch (MessagingException e) {
+        } catch (MessagingException |IOException e) {
             e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+            return false;
         }
     }
 
@@ -120,7 +120,7 @@ public class Mail_Utils {
 
     public static void main(String[] args) {
 
-        send("sharkievich@mail.ru", "This is not SPAM", "no spam");
+        send("sharkievich@mail.ru", "This is not SPAM", "no spam",null);
 
     }
 }

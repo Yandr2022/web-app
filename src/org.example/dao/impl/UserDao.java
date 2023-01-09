@@ -31,6 +31,20 @@ public class UserDao extends AbstractDAO<User> {
 
     @Override
     public boolean update(User user) {
+        String sql = "UPDATE users_db SET name = ?, password = ?,updatedTime = CURRENT_TIMESTAMP WHERE email = ?";
+        try (Connection connection = DB_Util.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setString(1, user.getName());
+            statement.setString(2, user.getPassword());
+            statement.setString(3, user.getEmail());
+            if (statement.executeUpdate() == 1) {
+                System.out.println("user was updated successfully");
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException();
+        }
         return false;
     }
 

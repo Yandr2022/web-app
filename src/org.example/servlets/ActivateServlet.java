@@ -12,7 +12,7 @@ import java.io.IOException;
 @WebServlet("/activate")
 public class ActivateServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws  IOException {
         resp.setContentType("text/html");
         String email = req.getParameter("email").trim();
         boolean activate = new UserDao().activateAccount(new UserDao().getByEmail(email));

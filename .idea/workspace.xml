@@ -8,26 +8,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1adbf9b7-af3b-4aa0-8125-cf6539fd2694" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/org.example/servlets/ActivateServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/PwdGener.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/PwdReset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org.example/servlets/PwdGenerateServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org.example/servlets/ResetPwdServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org.example/util/EncryptDecryptUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org.example/util/PswGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Reg.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Reg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/activate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/activate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/DAO/AbstractDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/dao/AbstractDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/DAO/impl/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/DAO/impl/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/dao/impl/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/RegServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/RegServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/TestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/TestServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/WelcomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/WelcomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/task/ResultServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/task/ResultServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/example/servlets/task/TaskServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/task/TaskServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/util/AppConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/util/AppConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/util/DB_Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/util/DB_Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/util/IOUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/util/IOUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/util/Mail_Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/util/Mail_Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org.example/dao/impl/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/dao/impl/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org.example/servlets/ActivateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/ActivateServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org.example/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org.example/util/Mail_Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/util/Mail_Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,21 +65,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/web-app/src/main/webapp&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.43218392&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propDebugger&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Юлия/web-app/src/main/webapp",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.43218392",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Юлия\web-app\src\main\webapp" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Юлия\web-app\src\org.example\model" />
       <recent name="C:\Users\Юлия\web-app\src\org" />
@@ -95,8 +92,21 @@
     </key>
   </component>
   <component name="RunManager" selected="Smart Tomcat.Tomcat: web-app">
-    <configuration name="DB_Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.util.DB_Util" />
+    <configuration name="Mail_Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.util.Mail_Utils" />
+      <module name="web-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PswGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.util.PswGenerator" />
       <module name="web-app" />
       <extension name="coverage">
         <pattern>
@@ -122,24 +132,11 @@
       </method>
     </configuration>
     <configuration name="User" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.model.User" />
+      <option name="MAIN_CLASS_NAME" value="org.example.util.EncryptDecryptUtil" />
       <module name="web-app" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="org.example.util.Mail_Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.util.Mail_Utils" />
-      <module name="web-app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -208,20 +205,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DB_Util" />
+      <item itemvalue="Application.Mail_Utils" />
+      <item itemvalue="Application.PswGenerator" />
       <item itemvalue="Application.RegServlet" />
       <item itemvalue="Application.User" />
-      <item itemvalue="Application.org.example.util.Mail_Utils" />
       <item itemvalue="Smart Tomcat.TomCat" />
       <item itemvalue="Smart Tomcat.Tomcat: web-app" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Smart Tomcat.Tomcat: web-app" />
-        <item itemvalue="Application.DB_Util" />
+        <item itemvalue="Application.Mail_Utils" />
+        <item itemvalue="Application.PswGenerator" />
         <item itemvalue="Application.User" />
         <item itemvalue="Application.RegServlet" />
-        <item itemvalue="Application.org.example.util.Mail_Utils" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671375450721</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added ActivateServlet + update UserDao">
+      <created>1673164610138</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673164610138</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +280,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init first Web Application" />
     <MESSAGE value="train responce, request, added first Task" />
-    <option name="LAST_COMMIT_MESSAGE" value="train responce, request, added first Task" />
+    <MESSAGE value="added ActivateServlet + update UserDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ActivateServlet + update UserDao" />
   </component>
 </project>

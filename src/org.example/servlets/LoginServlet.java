@@ -27,7 +27,9 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String email = req.getParameter("email");
         final String password = req.getParameter("pwd");
-        User user = new UserDao().getByEmail(email.trim());
+
+
+       User user = new UserDao().getByEmail(email.trim());
         RequestDispatcher rd = req.getRequestDispatcher("login.html");
         if (user == null) {
             resp.getWriter().println("<b>User does not exist. Please <a href ='registration'>Reg</a>");
