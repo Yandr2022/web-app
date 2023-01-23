@@ -2,6 +2,9 @@ package org.example.model;
 
 import lombok.Data;
 
+import java.sql.Timestamp;
+import java.util.Set;
+
 
 @Data
 public class User {
@@ -9,7 +12,11 @@ public class User {
     private String name;
     private String email;
     private String password;
-    private String isActivate;
+    private boolean isActive;
+    private Timestamp createdTime;
+    private Timestamp updatedTime;
+    private Set<Role> roles;//TODO POPULATE via jdbc
+    private Office office;
 
 
 }

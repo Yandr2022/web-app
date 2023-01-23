@@ -4,7 +4,7 @@ import org.example.dao.impl.UserDao;
 import org.example.model.User;
 import org.example.util.IOUtils;
 import org.example.util.Mail_Utils;
-
+import static org.example.util.EncryptDecryptUtil.encrypt;
 
 //import org.util.Mail_Utils;
 
@@ -29,17 +29,22 @@ public class RegServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("name").trim();
         String email = req.getParameter("email").trim();
-        String pwd1 = req.getParameter("password1");
-        String pwd2 = req.getParameter("password2");
+
+        String pwd1 = encrypt(req.getParameter("password1"));
+        String pwd2 = encrypt(req.getParameter("password2"));
+
         RequestDispatcher dispatcher = req.getRequestDispatcher("Reg.html");
         resp.setContentType("text/html");
+
         if (!pwd1.equals(pwd2)){
             resp.getWriter().println("<b>Password are not equal</b>");
             dispatcher.include(req,resp);
             return;
         }
+
         UserDao dao = new UserDao();
         User user =dao.getByEmail(email);
+
         if (user != null) {
             resp.getWriter().println("<b>Email already exist! Please </b><a href = 'login'>login</a>");
             dispatcher.include(req,resp);

@@ -83,6 +83,13 @@ public class EncryptDecryptUtil {
         return null;
     }
 
+    public static void main(String[] args) {
+        String encPassw = "12589";
+        encPassw = EncryptDecryptUtil.encrypt(encPassw);
+        System.out.println(encPassw);
+        encPassw =decrypt(encPassw);
+        System.out.println(encPassw);
+    }
 
 
 }

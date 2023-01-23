@@ -45,7 +45,5 @@ public class ResetPwdServlet extends HttpServlet {
             rd = req.getRequestDispatcher("Login.html");
             rd.include(req, resp);
 
-
-
     }
 }
