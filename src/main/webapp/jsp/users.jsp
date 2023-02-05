@@ -24,7 +24,11 @@
         }
     </style>
 </head>
+
 <body>
+<jsp:include page="header.jsp"></jsp:include>
+
+<h2>${msg == null ? '' : msg}</h2>
 <table>
     <tr>
         <th>ID</th>
@@ -37,6 +41,8 @@
         <th>ACTIVE</th>
         <th>LAST UPDATED</th>
         <th>CREATED</th>
+        <th></th>
+        <th></th>
 <%--        TODO ADD ROLES HEADER HREF--%>
     </tr>
     <c:forEach var="user" items="${users}" varStatus="counter" >
@@ -45,12 +51,14 @@
             <td>${user.name}</td>
             <td>${user.email}</td>
             <td>${user.password}</td>
-            <td><a href='${user.office.id}'>viewDetails</a></td>
-            <td> SIZE : ${user.roles.size()}> </td>
-<%--            <td>${user.isActive}</td>--%>
-            <td>null</td>
+            <td><a href="viewOffice?id=${user.office.id}">viewDetails</a></td>
+            <td><a href="viewRolesList?userId=${user.id}">viewDetails</a></td>
+<%--            <td> SIZE : ${user.roles.size()}> </td>--%>
+            <td>${user.isActive}</td>
             <td>${user.updatedTime}</td>
             <td>${user.createdTime}</td>
+            <td><a href='users?action=U'>UPDATE</a></td>
+            <td><a href='users?action=D'>DELETE</a></td>
         </tr>
     </c:forEach>
 
@@ -77,5 +85,7 @@
 <%--    <% } %>--%>
 
 </table>
+<a href='users?action=C'>CREATE NEW USER</a>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

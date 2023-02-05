@@ -18,5 +18,10 @@ public class User {
     private Set<Role> roles;//TODO POPULATE via jdbc
     private Office office;
 
-
+    public boolean isActive() {
+        return isActive;
+    }
+    public boolean getIsActive() {
+        return isActive;
+    }
 }

@@ -14,7 +14,7 @@ import java.util.Set;
 public class UserDao extends AbstractDAO<User> {
 private final String COLUMNS= "u.id as 'UserId', u.`name` as 'UserName', u.`email`,u.`password`, u.`isActive`" +
         ", u.`createdTime`, u.`updatedTime`, o.id as 'OfficeId', o.name as 'OfficeName', o.location, o.phone, o.fax";
-private static RoleDao roleDao= new RoleDao();
+public static RoleDao roleDao= new RoleDao();
 
     public boolean insert(User user) {
         String sql = "INSERT INTO users_db ( name, email, password ) VALUES (?, ?, ?)";

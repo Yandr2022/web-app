@@ -37,6 +37,28 @@ public class RoleDao extends AbstractDAO<Role> {
     public Role getById(Role role) {
         return null;
     }
+    public Role getByName(String name) {
+        String sql = "SELECT id, name, description FROM roles WHERE name = ?";
+        Role role = null;
+        try (Connection connection = DB_Util.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+            preparedStatement.setString(1, name);
+
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while (rs.next()) {
+                role = new Role();
+                role.setId(rs.getInt("id"));
+                role.setName(rs.getString("name"));
+                role.setDescription(rs.getString("description"));
+
+            }
+        }catch (SQLException sqlException){
+            sqlException.printStackTrace();
+        }
+        return role;
+    }
 
     @Override
     public Set<Role> getAll() {

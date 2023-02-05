@@ -7,36 +7,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1adbf9b7-af3b-4aa0-8125-cf6539fd2694" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/JDBC.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/users.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/welcome.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/test.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org.example/dao/impl/RoleDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org.example/model/Office.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org.example/model/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org.example/servlets/LogOutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org.example/servlets/TestJsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org.example/servlets/UsersServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org.example/util/ServletUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/example/filters/LogFilter.java" afterDir="false" />
+    <list default="true" id="1adbf9b7-af3b-4aa0-8125-cf6539fd2694" name="Changes" comment="added jstl">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/auth.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/add-user.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org.example/dao/impl/OfficesDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/example/filters/AuthFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/users.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/welcome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org.example/dao/impl/RoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/dao/impl/RoleDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org.example/dao/impl/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/dao/impl/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org.example/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org.example/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org.example/servlets/RegServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/RegServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org.example/servlets/ResetPwdServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/ResetPwdServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org.example/servlets/WelcomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/WelcomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org.example/servlets/UsersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/servlets/UsersServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org.example/util/EncryptDecryptUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/util/EncryptDecryptUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org.example/util/ServletUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org.example/util/ServletUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/example/filters/LogFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/example/filters/LogFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +41,8 @@
       <list>
         <option value="Enum" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -101,53 +91,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Юлия/web-app/src/main/webapp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.43218392",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Юлия/web-app/src/main/webapp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.43218392&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Юлия\web-app\src\main\webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Юлия\web-app\src\main\resources" />
       <recent name="C:\Users\Юлия\web-app\src\main\webapp" />
       <recent name="C:\Users\Юлия\web-app\src\org.example\servlets" />
       <recent name="C:\Users\Юлия\web-app\src\main\webapp\jsp" />
       <recent name="C:\Users\Юлия\web-app\src\org.example\model" />
-      <recent name="C:\Users\Юлия\web-app\src\org" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example" />
     </key>
   </component>
   <component name="RunManager" selected="Smart Tomcat.Tomcat: web-app">
-    <configuration name="Mail_Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.util.Mail_Utils" />
+    <configuration name="RegServlet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.servlets.RegServlet" />
       <module name="web-app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.util.*" />
+          <option name="PATTERN" value="org.example.servlets.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,12 +145,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegServlet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.servlets.RegServlet" />
+    <configuration name="ServletUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.util.ServletUtils" />
       <module name="web-app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.servlets.*" />
+          <option name="PATTERN" value="org.example.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -334,8 +324,8 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.ServletUtils" />
       <item itemvalue="Application.UserDao" />
-      <item itemvalue="Application.Mail_Utils" />
       <item itemvalue="Application.RegServlet" />
       <item itemvalue="Application.User" />
       <item itemvalue="Smart Tomcat.TomCat" />
@@ -345,10 +335,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Smart Tomcat.Tomcat: web-app" />
+        <item itemvalue="Application.User" />
+        <item itemvalue="Application.ServletUtils" />
         <item itemvalue="Application.UserDao" />
         <item itemvalue="Application.RegServlet" />
-        <item itemvalue="Application.Mail_Utils" />
-        <item itemvalue="Application.User" />
       </list>
     </recent_temporary>
   </component>
@@ -368,7 +358,10 @@
       <workItem from="1674238007931" duration="132000" />
       <workItem from="1674377190151" duration="1325000" />
       <workItem from="1674414818339" duration="9800000" />
-      <workItem from="1674455813632" duration="8251000" />
+      <workItem from="1674455813632" duration="24274000" />
+      <workItem from="1674490523235" duration="7061000" />
+      <workItem from="1674880666180" duration="37000" />
+      <workItem from="1675221356800" duration="139000" />
     </task>
     <task id="LOCAL-00001" summary="Init first Web Application">
       <created>1671355612799</created>
@@ -405,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673275173896</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added jstl">
+      <created>1674468378592</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674468378592</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,6 +439,7 @@
     <MESSAGE value="train responce, request, added first Task" />
     <MESSAGE value="added ActivateServlet + update UserDao" />
     <MESSAGE value="added PwdGenerateServlet+ ResetPwdServlet + update UserDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="added PwdGenerateServlet+ ResetPwdServlet + update UserDao" />
+    <MESSAGE value="added jstl" />
+    <option name="LAST_COMMIT_MESSAGE" value="added jstl" />
   </component>
 </project>

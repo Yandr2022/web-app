@@ -12,8 +12,14 @@ import java.io.UnsupportedEncodingException;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
+
 
 public class EncryptDecryptUtil {
+    private static final Logger logger = LogManager.getLogger(EncryptDecryptUtil.class);
 
     private static final String SECRET_KEY_1 = "ssdkF$HUy2A#D%kd";
     private static final String SECRET_KEY_2 = "weJiSEvR5yAC5ftB";
@@ -89,6 +95,7 @@ public class EncryptDecryptUtil {
         System.out.println(encPassw);
         encPassw =decrypt(encPassw);
         System.out.println(encPassw);
+        logger.info("test" + encPassw);
     }
 
 

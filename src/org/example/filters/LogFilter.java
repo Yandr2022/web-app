@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.Date;
 
-@WebFilter("/*") 
+@WebFilter(filterName = "LogFilter")
 public class LogFilter extends HttpFilter {
     private static final String PRINT_PATTERN = "%s : %s [%s] {%s} %s %s %s";
 
