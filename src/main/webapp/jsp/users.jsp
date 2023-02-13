@@ -57,8 +57,8 @@
             <td>${user.isActive}</td>
             <td>${user.updatedTime}</td>
             <td>${user.createdTime}</td>
-            <td><a href='users?action=U'>UPDATE</a></td>
-            <td><a href='users?action=D'>DELETE</a></td>
+            <td><a href='users?action=U&userId=${user.id}'>UPDATE</a></td>
+            <td><a href='users?action=D&userId=${user.id}'>DELETE</a></td>
         </tr>
     </c:forEach>
 

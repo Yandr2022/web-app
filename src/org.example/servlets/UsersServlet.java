@@ -61,10 +61,19 @@ public class UsersServlet extends HttpServlet {
 
             String officeLocation = req.getParameter("office");
             user.setOffice(officesDAO.getByLocation(officeLocation));
-            user.setActive(req.getParameter("isActive").equals("true"));
+            user.setActive(req.getParameter("isActive")!= null);
+//            user.setActive(req.getParameter("isActive").equals("true"));
            boolean isAdded =  userDao.insert(user);
            req.setAttribute("msg",isAdded?"User was added":"User not added");
-           forward(req,resp,"jsp/users.jsp");
+            Set<User> all = userDao.getAll();
+            System.out.println("Users size: "+ all.size());
+            req.setAttribute("users",all);
+
+//            req.setAttribute("action",null);
+//            doGet(req,resp);
+
+            forward(req,resp,"jsp/users.jsp");
+            return;
 
         }
         RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/users.jsp");
